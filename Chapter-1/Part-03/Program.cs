@@ -63,7 +63,21 @@ public class Product
 
     public override string ToString()
     {
-        return string.Format("{0}: {1}", name, price);
+        return string.Format("{0}: {1:C}", name, price);
+    }
+
+    public static void Main()
+    {
+        List<Product> product = Product.GetSampleProducts();
+
+        System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+
+        foreach (var item in product)
+        {
+            System.Console.WriteLine(item.ToString());
+        }
+
+        System.Console.ReadKey();
     }
 }
 

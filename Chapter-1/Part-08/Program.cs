@@ -1,15 +1,17 @@
 ﻿#region Russian
 
-// Хотя улучшение заметно, но было бы неплохо сортировать товары, просто указывая
-// нужное сравнение и не реализуя для этого интерфейс. Именно это и делается в
-// листинге 1.7, в котором с помощью делегата методу Sort() сообщается, каким образом
-// сравнивать два товара.
+/*
+
+ Хотя улучшение заметно, но было бы неплохо сортировать товары, просто указывая
+ нужное сравнение и не реализуя для этого интерфейс. Именно это и делается в
+ листинге 1.7, в котором с помощью делегата методу Sort() сообщается, каким образом
+ сравнивать два товара.
+
+*/
 
 //Листинг 1.7. Сортировка List<Product> с использованием делегата Comparison<Product> (C# 2)
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 public class Product
 {
@@ -50,7 +52,7 @@ public class Product
 
     public override string ToString()
     {
-        return string.Format("{0}: {1}", name, price);
+        return string.Format("{0}: {1:C}", name, price);
     }
 }
 
@@ -59,24 +61,29 @@ class ArrayListSort
     static void Main()
     {
         List<Product> products = Product.GetSampleProducts();
-        products.Sort(delegate (Product x, Product y)
-        {
-            return x.Name.CompareTo(y.Name);
-        }
-        );
+        products.Sort(
+            delegate (Product x, Product y)
+            {
+                return x.Name.CompareTo(y.Name);
+            });
+
+        Console.OutputEncoding = System.Text.Encoding.Unicode;
 
         foreach (Product product in products)
         {
             Console.WriteLine(product);
         }
 
-        //Задержка программы.
         Console.ReadKey();
     }
 }
 
-// Обратите внимание на отсутствие типа ProductNameCompare. Выделенный полужирным
-// оператор создает экземпляр делегата, который предоставляется методу Sort()
-// для выполнения сравнений. Вы изучите это средство (анонимные методы) в главе 5.
+/*
+
+ Обратите внимание на отсутствие типа ProductNameCompare. Выделенный полужирным
+ оператор создает экземпляр делегата, который предоставляется методу Sort()
+ для выполнения сравнений. Вы изучите это средство (анонимные методы) в главе 5.
+
+*/
 
 #endregion
