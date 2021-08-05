@@ -12,6 +12,7 @@
 */
 
 // Листинг 1.3. Автоматически реализуемые свойства и упрощенная инициализация (С# 3)
+
 using System.Collections.Generic;
 
 class Product

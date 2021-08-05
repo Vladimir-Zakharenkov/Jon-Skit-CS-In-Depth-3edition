@@ -25,6 +25,7 @@
 */
 
 //Листинг 1.5. Сортировка ArrayList с применением ICompare (С# 1)
+
 using System;
 using System.Collections;
 

@@ -58,6 +58,7 @@ public class Product
         list.Add(new Product("Assassins", 14.99m));
         list.Add(new Product("Frogs", 13.99m));
         list.Add(new Product("Sweeney Todd", 10.99m));
+
         return list;
 
     }
