@@ -11,7 +11,8 @@
 
 */
 
-//Листинг 1.6. Сортировка List<Product> с применением ICompare<Product> (C# 2)
+// Листинг 1.6. Сортировка List<Product> с применением ICompare<Product> (C# 2)
+
 using System;
 using System.Collections.Generic;
 
