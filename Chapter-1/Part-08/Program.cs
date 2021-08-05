@@ -10,6 +10,7 @@
 */
 
 //Листинг 1.7. Сортировка List<Product> с использованием делегата Comparison<Product> (C# 2)
+
 using System;
 using System.Collections.Generic;
 
@@ -61,6 +62,7 @@ class ArrayListSort
     static void Main()
     {
         List<Product> products = Product.GetSampleProducts();
+
         products.Sort(
             delegate (Product x, Product y)
             {
