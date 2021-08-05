@@ -69,7 +69,6 @@ public class Product
     {
         return string.Format("{0}: {1:C}", name, price);
     }
-
 }
 
 class ProductNameCompare : IComparer
@@ -78,6 +77,7 @@ class ProductNameCompare : IComparer
     {
         Product first = (Product)x;
         Product second = (Product)y;
+
         return first.Name.CompareTo(second.Name);
     }
 }
