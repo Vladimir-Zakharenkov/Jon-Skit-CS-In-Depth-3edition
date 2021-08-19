@@ -36,13 +36,14 @@
 using System;
 using System.Linq;
 using System.Xml.Linq;
-using System.IO;
 
 public class Program
 {
     static void Main()
     {
-        XDocument doc = XDocument.Load("G:\\Jon-Skit-CS-In-Depth-3edition\\Chapter-1\\Part-18\\data.xml");
+        string load = "E:\\Jon-Skit-CS-In-Depth-3edition\\Chapter-1\\Part-18\\data.xml";
+
+        XDocument doc = XDocument.Load(load);
 
         var filtered = from p in doc.Descendants("Product")
                        join s in doc.Descendants("Supplier")

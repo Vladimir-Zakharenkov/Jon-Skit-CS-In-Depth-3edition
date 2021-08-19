@@ -32,10 +32,11 @@ public class Product
     public decimal Price { get; private set; }
     public int SupplierID { get; private set; }
 
-    public Product(string name, decimal price)
+    public Product(string name, decimal price, int supplier)
     {
         Name = name;
         Price = price;
+        SupplierID = supplier;
     }
 
     Product()
@@ -106,7 +107,7 @@ public class Program
 
 /*
 
-Вы можете обнаружить, что код в листтшге 1.16 удивительно похож на SQL. И действительно, 
+Вы можете обнаружить, что код в листинге 1.16 удивительно похож на SQL. И действительно, 
 первая реакция многих разработчиков на язык LINQ (до его внимательного
 исследования) - его откладывание в сторону как попытки простого встраивания возможностей 
 SQL внутрь языка ради взаимодействия с базами данных. К счастью, хотя
